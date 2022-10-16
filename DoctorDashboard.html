@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width" >
+<link rel="icon" href="logo.png" type="image/gif" sizes="16x16">
+<title>MediConnect</title>
+<link rel="stylesheet" href="style4.css" >
+<link href='http://fonts.googleapis.com/css?family=Roboto'>
+</head>
+<body>
+  <div class="title_bar">
+    <div class="logo_area" ><a href="index.html"><img src="logo.png"></a><div class="name">MediConnect</div></div>
+  </div>
+
+  <div class="dashboard_area">
+    <div class="user_short_info" onclick="open_cont_profile()">
+      <img src="Doctor.png">
+      <div class="user_role">Doctor</div>
+      <div class="user_name">Paresh Sudhir Pandit</div>
+      </div>
+    <div class="options">
+      <button class="opt">Appointment Management</button>
+      <button class="opt">Patient Management</button>
+      <button class="opt">New Patient</button>
+      <button class="opt">Conversation</button>
+      <button class="opt">Billing</button>
+      <button class="opt">Logout</button>
+    </div>
+  </div>
+
+<div class="container">
+<div id="cont_profile">
+<div class="card">
+<div class="personal_info">
+  <div class="prfl_img"><img src ="Doctor.png"></div>
+  <div class="box"><div class="txt">User Type</div><div class="inpt_field" ><input Type="text" placeholder="Doctor" disabled></div></div>
+  <div class="box"><div class="txt">Gender</div><div class="inpt_field"><input Type="text" placeholder="Male" disabled></div></div>
+  <div class="box"><div class="txt">Date Of Birth</div><div class="inpt_field"><input Type="text" placeholder="29/10/1998" disabled></div></div>
+  <div class="box"><div class="txt">First</div><div class="inpt_field"><input Type="text" placeholder="Paresh" ></div></div>
+  <div class="box"><div class="txt">Middle</div><div class="inpt_field"><input Type="text" placeholder="Sudhir"></div></div>
+  <div class="box"><div class="txt">Last</div><div class="inpt_field"><input Type="text" placeholder="Pandit"></div></div>
+</div>
+</div>
+
+<div class="card">
+  <div class="card1"><div class="header2">Contact Details</div>
+
+  <div id="cnt_win">
+  <div class="cnt1"><div class="txt2">Office Phone:</div><div class="cnt_value">02165 224433</div></div>
+  <div class="cnt2"><div class="txt2">Mobile :</div><div class="cnt_value">7057674497</div></div>
+  <div class="cnt3"><div class="txt2">Email :</div><div class="cnt_value">pareshpandit5803@gmail.com</div></div>
+  <button class="btn_Udt" onclick="open_upd_win()">Update</button>
+  </div>
+
+  <div id="upd_win">
+  <div class="cnt1"><div class="txt2">Office Phone:</div><input class="inpt_cnt_value"></div>
+  <div class="cnt2"><div class="txt2">Mobile :</div><input class="inpt_cnt_value"></div>
+  <div class="cnt3"><div class="txt2">Email :</div><input class="inpt_cnt_value"></div>
+  <button class="btn_save" onclick="open_cnt_win()">Save</button>
+  </div>
+
+  </div>
+
+  <div class="card1"><div class="header2">Qualification</div>
+  <div id="qual_win">
+  <div class="cnt1"><div class="txt2">Qualification :</div><div class="cnt_value"></div></div>
+  <div class="cnt1"><div class="txt2">Degree :</div><div class="cnt_value"></div></div>
+  <div class="cnt1"><div class="txt2">Description :</div><div class="cnt_value"></div></div>
+  <button class="btn_Udt" onclick="open_upd_qual_win()">Update</button>
+  </div>
+
+  <div id="upd_qual_win">
+  <div class="cnt1"><div class="txt2">Qualification :</div><input class="inpt_cnt_value"></div>
+  <div class="cnt1"><div class="txt2">Degree :</div><input class="inpt_cnt_value"></div>
+  <div class="cnt1"><div class="txt2">Description :</div><input class="inpt_cnt_value"></div>
+  <button class="btn_save" onclick="open_qual_win()">Save</button>
+  </div>
+  </div>
+
+  <div class="card1"><div class="header2">Hospital Address Details</div>
+  <div id="hosp_win">
+  <div class="cnt1"><div class="txt2">Hospital Name</div><div class="cnt_value"></div></div>
+  <div class="cnt1"><div class="txt2">Address :</div><div class="cnt_value"></div></div>
+  <div class="cnt1"><div class="txt2">Description :</div><div class="cnt_value"></div></div>
+  <button class="btn_Udt" onclick="open_upd_hosp_win()">Update</button>
+  </div>
+
+  <div id="upd_hosp_win">
+  <div class="cnt1"><div class="txt2">Hospital Name</div><input class="inpt_cnt_value"></div>
+  <div class="cnt1"><div class="txt2">Address :</div><input class="inpt_cnt_value"></div>
+  <div class="cnt1"><div class="txt2">Description :</div><input class="inpt_cnt_value"></div>
+  <button class="btn_save" onclick="open_hosp_win()">Save</button>
+  </div>
+
+  </div>
+</div>
+</div>
+</div>
+
+</body>
+
+<script>
+function open_cont_profile() {
+  document.getElementById('cont_profile').style.display="block";
+}
+
+function open_upd_win() {
+  document.getElementById('cnt_win').style.display="none";
+  document.getElementById('upd_win').style.display="block";
+}
+
+function open_cnt_win() {
+  document.getElementById('upd_win').style.display="none";
+  document.getElementById('cnt_win').style.display="block";
+}
+
+function open_upd_qual_win() {
+  document.getElementById('qual_win').style.display="none";
+  document.getElementById('upd_qual_win').style.display="block";
+}
+
+function open_qual_win() {
+  document.getElementById('upd_qual_win').style.display="none";
+  document.getElementById('qual_win').style.display="block";
+}
+
+function open_upd_hosp_win() {
+  document.getElementById('hosp_win').style.display="none";
+  document.getElementById('upd_hosp_win').style.display="block";
+}
+
+function open_hosp_win() {
+  document.getElementById('upd_hosp_win').style.display="none";
+  document.getElementById('hosp_win').style.display="block";
+}
+
+
+</script>
+</html>
